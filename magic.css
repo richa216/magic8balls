@@ -1,11 +1,20 @@
 
  *{
-      		font-family: 'ABeeZee';font-size: 30px;
+      		font-family: 'ABeeZee';
+      		font-size: 30px;
+      		margin: 0;
+      		padding: 0;
          }
 
-         body
+         .back
          {
-         	background-color: #4d4d4d;
+         	/*background-color: #4d4d4d;*/
+         	background-image: url('bhoot.gif');
+         	margin-top: 0;
+         	padding-top: 0;
+         	width: 100%;
+         	background-repeat: no-repeat;
+
 
          }
 
@@ -55,9 +64,10 @@
 	margin-top: 18vw;
 	text-align: center;
 	border-radius: 30px;
-	font-size: 2.5vw;
+	font-size: 2vw;
 	padding: 10px;
 	width: 95%;
+
 
 }
 #name
@@ -67,6 +77,7 @@
 	border:none;
 	padding: 10px;
 	width: 200px;
+	background-color: 	#f8f8ff;
 }
 
 #myBtn
@@ -77,7 +88,7 @@
 	font-size: 20px;
 	padding: 10px;
 	outline: none;
-
+	margin-bottom: 30px;
 }
 #myBtn:hover
 {
@@ -98,7 +109,7 @@
 }
 .circle
 {
-	background-color: black;
+	background-color: rgba(0,0,0,0.5);
 	
 	text-align: center;
 	border-radius: 50%;
@@ -143,6 +154,9 @@
 	border-radius: 10px;
 	background-color: red;
 	border: none;
+	padding: 5px 5px 5px 5px;
+	width: 100px;
+	height: 40px;
 
 }
 #thanks a
