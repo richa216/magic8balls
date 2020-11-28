@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>magicEightballs</title>
+	  <meta charset="UTF-8">
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="magic.css">
+
+
+</head>
+<body align="center">
+
+
+
+	<div class="tarocards" style="text-align: center;">
+		<header>
+			<h1 style="font-size: 64px">MaGiC<span style="font-size: 86px;color: red;">8</span>BaLLs</h1>
+		</header>
+	    <center>
+		<div class="game">
+
+            <div class="circle">
+            	<input type="text" id='ans'  placeholder="your's answer" ><br><br>
+            		<button id="thanks"><a href="thankyou.html">Quit</a></button>
+            </div>
+
+
+		</div>
+	</center>
+
+
+            <input type="text" id='name' placeholder="yourIdentity" ><br><br>
+			<input type="submit" id="myBtn" onclick ="f()" value="Ask Here" >
+		
+
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id='log' style="font-size: 20px;">Hello!!! What you want to know???</p><br><br>
+    <input type="text" id="que">
+    <input type="button" id="myBtn1" onclick="queanswer()" value="YourCaRd">
+		
+  </div>
+
+</div>
+			
+		</div>
+
+		<div id="snackbar">Your answer is on your screen</div>
+
+
+
+
+
+<script>
+
+
+
+
+function queanswer()
+{
+	
+
+	var ques =  [
+	'can i become an engineer','shall we do that']
+
+
+
+
+
+	y=document.getElementById('que').value
+	if(y==('Hello,Who are you'||'Hello Who are you'||'Hello,who are you'))
+	{
+		document.getElementById('ans').value='hey dear,I am chatbot,what can i do for you??';
+		document.getElementById('myModal').style.display = 'none';
+	}
+
+
+	else if(y=='how are you')
+	{
+		document.getElementById('ans').value='I am good How can i help u???';
+
+document.getElementById('myModal').style.display = 'none';
+	}
+	else if(y.includes('can')||y.includes('should')||y.includes('will')||y.includes('would')||y.includes('could')||y.includes('would'))
+		{
+
+			var magcicballs = ['It is certain',
+'It is decidedly so',
+'Cannot predict now',
+'My sources say no',
+'Signs point to yes'];
+
+document.getElementById('myModal').style.display = 'none';
+var choice = Math.floor(Math.random()*4)
+document.getElementById('ans').value=magcicballs[choice];
+}
+
+   else
+   {
+   		document.getElementById('ans').value='sorry,i am not able to understand';
+
+document.getElementById('myModal').style.display = 'none';
+   }
+//document.getElementById('mybtn1').style.display='none';
+
+
+
+
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000);
+
+
+  document.getElementById('ans').style.animation='expand 5s linear 1'
+
+
+
+}
+
+
+
+
+//choice = Math.floor(Math.random()*8);
+
+
+
+
+
+
+
+
+function f()
+{
+	debugger;
+var x=document.getElementById('name').value;
+if(x!='')
+{
+	document.getElementById('log').innerHTML = 'Hello!!! ' + x + ' What you want to know???';
+}
+else
+{
+	document.getElementById('log').innerHTML  = 'Hello!!! What you want to know???';
+}
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+	}
+
+
+</script>
+</body>
+</html>
