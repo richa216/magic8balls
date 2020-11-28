@@ -102,10 +102,9 @@
 	margin-top: 30px;
 }
 
-
-.game
+#que
 {
-
+	text-transform: lowercase;
 }
 .circle
 {
